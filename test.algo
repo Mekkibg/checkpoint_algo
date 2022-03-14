@@ -1,0 +1,32 @@
+ALGORITHM algorithm_checkpoint
+VAR
+    sentence: STRING;
+    nbr_words: INTEGER;
+    nbr_vowels: INTEGER;
+    long_sentence: INTEGER;
+    i = INTEGER:=1
+
+BEGIN
+WHILE (sentence [i]<> ".") DO
+ if (sentence[i]= " ") 
+     nbr_words= nbr_words+1;
+ end if 
+ SWITCH (sentence [i]) DO
+     case "a" : nbr_vowels=nbr_vowels+1;
+     case "e" : nbr_vowels=nbr_vowels+1;
+     case "i" : nbr_vowels=nbr_vowels+1;
+     case "o" : nbr_vowels=nbr_vowels+1;
+     case "u" : nbr_vowels=nbr_vowels+1;
+     case "y" : nbr_vowels=nbr_vowels+1;
+     default
+     write("sorry no vowels")
+ END_SWITCH
+ i=i+1;
+END_WHILE
+ long_sentence:=i;
+ write (nbr_vowels);
+ write (nbr_words);
+ write (long_sentence);
+
+    
+END
